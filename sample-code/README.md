@@ -17,6 +17,8 @@
 『はじめてのフレームワークとしての FuelPHP 第2版』の詳細は、以下の URL を参照願います。
 
 * http://tatsu-zine.com/books/fuelphp1st-2nd-1
+* http://tatsu-zine.com/books/fuelphp1st-2nd-2
+* http://tatsu-zine.com/books/fuelphp1st-2nd-3
 
 ## ライセンス
 
