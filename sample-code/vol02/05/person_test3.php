@@ -15,9 +15,9 @@ require __DIR__ . '/person.php';
 class Person_Test3 extends PHPUnit_Framework_TestCase
 {
 	/**
-	* @dataProvider person_provider
+	* @dataProvider provider_人データ
 	*/
-	public function test_gender_age($name, $gender, $birthdate)
+	public function test_設定した性別は取得した性別と一致する($name, $gender, $birthdate)
 	{
 		$person = new Person($name, $gender, $birthdate);
 		
@@ -27,7 +27,7 @@ class Person_Test3 extends PHPUnit_Framework_TestCase
 		$this->assertEquals($expected, $test);
 	}
 	
-	public function person_provider()
+	public function provider_人データ()
 	{
 		return array(
 			array('Rintaro', 'male',   '1991/12/14'),

@@ -24,7 +24,7 @@ class Person_Test2 extends PHPUnit_Framework_TestCase
 		fwrite(STDOUT, __METHOD__ . "\n");
 	}
 	
-	public function test_get_gender_male()
+	public function test_男性の場合は性別を取得するとmaleである()
 	{
 		fwrite(STDOUT, __METHOD__ . "\n");
 		
@@ -36,7 +36,7 @@ class Person_Test2 extends PHPUnit_Framework_TestCase
 		$this->assertEquals($expected, $test);
 	}
 	
-	public function test_get_gender_female()
+	public function test_女性の場合は性別を取得するとfemaleである()
 	{
 		fwrite(STDOUT, __METHOD__ . "\n");
 	

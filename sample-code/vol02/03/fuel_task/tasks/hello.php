@@ -16,6 +16,6 @@ class Hello
 {
 	public function run($name = 'World')
 	{
-		echo 'Hello ', $name, '!';
+		echo 'Hello ', $name, '!', PHP_EOL;
 	}
 }
