@@ -12,6 +12,15 @@
 
 class Model_Mail extends Model
 {
+	/**
+	 * メールを作成し送信する
+	 * 
+	 * @param array $post
+	 * @return void
+	 * @throws \EmailValidationFailedException
+	 * @throws \EmailSendingFailedException
+	 * @throws \FuelException
+	 */
 	public function send($post)
 	{
 		$data = $this->build_mail($post);

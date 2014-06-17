@@ -12,7 +12,13 @@
 
 class MyInputFilters
 {
-	// 文字エンコーディングの検証フィルタ
+	/**
+	 * 文字エンコーディングの検証フィルタ
+	 * 
+	 * @param string|array $value
+	 * @return string|array
+	 * @throws HttpInvalidInputException
+	 */
 	public static function check_encoding($value)
 	{
 		// 配列の場合は再帰的に処理
@@ -36,7 +42,13 @@ class MyInputFilters
 		}
 	}
 	
-	// 改行コードとタブを除く制御文字が含まれないかの検証フィルタ
+	/**
+	 * 改行コードとタブを除く制御文字が含まれないかの検証フィルタ
+	 * 
+	 * @param string|array $value
+	 * @return string|array
+	 * @throws HttpInvalidInputException
+	 */
 	public static function check_control($value)
 	{
 		// 配列の場合は再帰的に処理

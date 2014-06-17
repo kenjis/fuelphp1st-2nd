@@ -35,12 +35,12 @@ class Test_Functional_Form extends FunctionalTestCase
 		$this->assertNotNull(static::$crawler);
 	}
 	
-	public function test_レスポンスコードの確認()
+	public function test_レスポンスコードが200であることを確認()
 	{
 		$this->assertEquals(200, static::$client->getResponse()->getStatus());
 	}
-
-	public function test_レスポンスヘッダの確認()
+	
+	public function test_レスポンスヘッダのContentTypeを確認()
 	{
 		$test = static::$client->getResponse()->getHeader('Content-Type');
 		$expected = 'text/html; charset=UTF-8';
@@ -55,7 +55,7 @@ class Test_Functional_Form extends FunctionalTestCase
 		$this->assertEquals('お問い合わせ', static::$crawler->filter('h1')->text());
 	}
 	
-	public function test_空欄のまま確認ボタンを押す()
+	public function test_空欄のまま確認ボタンを押すとエラー()
 	{
 		$form = static::$crawler->selectButton('form_submit')->form();
 		static::$crawler = static::$client->submit($form);
@@ -76,7 +76,7 @@ class Test_Functional_Form extends FunctionalTestCase
 		$this->assertEquals($expected, $test);
 	}
 	
-	public function test_名前にタブを含める()
+	public function test_名前にタブを含めるとエラー()
 	{
 		$form = static::$crawler->selectButton('form_submit')->form();
 		static::$crawler = static::$client->submit($form, array(
@@ -93,7 +93,7 @@ class Test_Functional_Form extends FunctionalTestCase
 		$this->assertEquals($expected, $test);
 	}
 	
-	public function test_メールアドレスに改行を含める()
+	public function test_メールアドレスに改行を含めるとエラー()
 	{
 		$form = static::$crawler->selectButton('form_submit')->form();
 		static::$crawler = static::$client->submit($form, array(
@@ -110,7 +110,7 @@ class Test_Functional_Form extends FunctionalTestCase
 		$this->assertEquals($expected, $test);
 	}
 	
-	public function test_最大文字数を超えて入力()
+	public function test_最大文字数を超えて入力するとエラー()
 	{
 		$form = static::$crawler->selectButton('form_submit')->form();
 		static::$crawler = static::$client->submit($form, array(
@@ -150,7 +150,7 @@ class Test_Functional_Form extends FunctionalTestCase
 		$this->assertEquals($test, static::$crawler->filter('title')->text());
 	}
 	
-	public function test_修正ボタンを押す()
+	public function test_修正ボタンを押すとフォームに戻り入力値が維持される()
 	{
 		$form = static::$crawler->selectButton('form_submit1')->form();
 		static::$crawler = static::$client->submit($form);
@@ -195,7 +195,7 @@ class Test_Functional_Form extends FunctionalTestCase
 		$this->assertRegExp($pattern, $test);
 	}
 	
-	public function test_送信ボタンを押す()
+	public function test_送信ボタンを押すと送信完了()
 	{
 		$form = static::$crawler->selectButton('form_submit2')->form();
 		static::$crawler = static::$client->submit($form);

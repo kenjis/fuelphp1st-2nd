@@ -21,7 +21,7 @@ use AspectMock\Test as test;
  */
 class controller_form_Test extends AmTestCase
 {
-	public function test_action_index_get()
+	public function test_indexアクションをGETするとコンタクトフォームページが返る()
 	{
 		// HMVCリクエストを生成
 		$request = Request::forge('form/index');
@@ -44,7 +44,7 @@ class controller_form_Test extends AmTestCase
 		$this->assertRegExp($pattern, $body);
 	}
 	
-	public function test_action_index_post()
+	public function test_indexアクションにPOSTするとFieldsetのrepopulateメソッドが実行される()
 	{
 		// Input::method()を単にPOSTを返すモックに置き換え
 		$input = test::double('Fuel\Core\Input', ['method' => 'POST']);
@@ -58,7 +58,7 @@ class controller_form_Test extends AmTestCase
 		$fs->verifyInvoked('repopulate');
 	}
 	
-	public function test_action_confirm_valid()
+	public function test_confirmアクションで検証パスすると確認ページが返る()
 	{
 		// Validation::run()を単にtrueを返すモックに置き換え
 		$val = test::double('Fuel\Core\Validation', ['run' => true]);
@@ -72,7 +72,7 @@ class controller_form_Test extends AmTestCase
 		$this->assertEquals($expected, $title);
 	}
 	
-	public function test_action_confirm_invalid()
+	public function test_confirmアクションで検証エラーだとタイトルがエラーになる()
 	{
 		// Validation::run()を単にfalseを返すモックに置き換え
 		$val = test::double('Fuel\Core\Validation', ['run' => false]);
@@ -90,7 +90,7 @@ class controller_form_Test extends AmTestCase
 	 * @expectedException HttpInvalidInputException
 	 * @expectedExceptionMessage ページ遷移が正しくありません
 	 */
-	public function test_action_send_csrf_fail()
+	public function test_sendアクションでCSRF検証エラーだと例外が発生()
 	{
 		// Security::check_token()を単にfalseを返すモックに置き換え
 		$sec = test::double('Fuel\Core\Security', ['check_token' => false]);
@@ -99,7 +99,7 @@ class controller_form_Test extends AmTestCase
 		$response = Request::forge('form/send')->execute()->response();
 	}
 	
-	public function test_action_send_valid_save_ok()
+	public function test_sendアクションですべてパスすると送信完了ページが返る()
 	{
 		// Security::check_token()を単にtrueを返すモックに置き換え
 		$sec = test::double('Fuel\Core\Security', ['check_token' => true]);
@@ -119,7 +119,7 @@ class controller_form_Test extends AmTestCase
 		$this->assertEquals($expected, $title);
 	}
 	
-	public function test_action_send_EmailValidationFailedException()
+	public function test_sendアクションでEmailValidationFailedExceptionが発生するとタイトルが送信エラーになる()
 	{
 		Package::load('email');
 		
@@ -149,7 +149,7 @@ class controller_form_Test extends AmTestCase
 		$this->assertEquals($expected, $title);
 	}
 	
-	public function test_action_send_invalid()
+	public function test_sendアクションで検証エラーだとタイトルがエラーになる()
 	{
 		// Security::check_token()を単にtrueを返すモックに置き換え
 		$sec = test::double('Fuel\Core\Security', ['check_token' => true]);
@@ -165,7 +165,7 @@ class controller_form_Test extends AmTestCase
 		$this->assertEquals($expected, $title);
 	}
 	
-	public function test_action_send_valid_save_fail()
+	public function test_sendアクションで保存に失敗するとタイトルがサーバエラーになる()
 	{
 		// Security::check_token()を単にtrueを返すモックに置き換え
 		$sec = test::double('Fuel\Core\Security', ['check_token' => true]);
@@ -183,7 +183,7 @@ class controller_form_Test extends AmTestCase
 		$this->assertEquals($expected, $title);
 	}
 	
-	public function test_action_send_EmailSendingFailedException()
+	public function test_sendアクションでEmailSendingFailedExceptionが発生するとタイトルが送信エラーになる()
 	{
 		Package::load('email');
 		

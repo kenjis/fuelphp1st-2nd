@@ -22,7 +22,7 @@ class model_form_Test extends DbTestCase
 		'form' => 'form',
 	);
 	
-	public function test_find_one_by_id()
+	public function test_IDでレコードを検索する()
 	{
 		foreach ($this->form_fixt as $row)
 		{
@@ -37,7 +37,7 @@ class model_form_Test extends DbTestCase
 		}
 	}
 	
-	public function test_save_insert()
+	public function test_新規データをテーブルに保存する()
 	{
 		$data = array(
 			'name'       => '藤原義孝',
