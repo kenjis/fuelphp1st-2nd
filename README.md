@@ -19,6 +19,12 @@
 公式アカウント: [@fuelphp1st](https://twitter.com/fuelphp1st)
 ハッシュタグ: [#fuelphp1st](http://twitter.com/search?q=%23fuelphp1st)
 
+## コンタクトフォーム
+
+FuelPHP 1.7.2で本書の手順どおりに作成した「コンタクトフォーム」を別途以下で公開しました。
+
+* https://github.com/kenjis/fuelphp1st-2nd-contact-form
+
 ## 読者限定の非公開メーリングリスト
 
 本書には、読者限定の非公開メーリングリスト（Google グループ）が用意されています。このメーリングリストは本書の正式発売日（2014/6/17）から最低 1年間は提供されます。
