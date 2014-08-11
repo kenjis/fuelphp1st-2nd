@@ -19,6 +19,10 @@
 公式アカウント: [@fuelphp1st](https://twitter.com/fuelphp1st)
 ハッシュタグ: [#fuelphp1st](http://twitter.com/search?q=%23fuelphp1st)
 
+## 正誤情報
+
+本書の誤りについては、[正誤情報](https://github.com/kenjis/fuelphp1st-2nd/blob/master/ERRATA.md) を参照願います。
+
 ## コンタクトフォーム
 
 FuelPHP 1.7.2で本書の手順どおりに作成した「コンタクトフォーム」を別途以下で公開しました。
