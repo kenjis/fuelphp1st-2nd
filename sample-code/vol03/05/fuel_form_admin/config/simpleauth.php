@@ -2,7 +2,7 @@
 /**
  * 電子書籍『はじめてのフレームワークとしてのFuelPHP 第2版』の一部です。
  *
- * @version    1.0
+ * @version    1.1.0
  * @author     Kenji Suzuki <https://github.com/kenjis>
  * @license    MIT License
  * @copyright  2014 Kenji Suzuki
@@ -18,7 +18,7 @@
  * @version    1.7
  * @author     Fuel Development Team
  * @license    MIT License
- * @copyright  2010 - 2013 Fuel Development Team
+ * @copyright  2010 - 2014 Fuel Development Team
  * @link       http://fuelphp.com
  */
 
@@ -37,6 +37,11 @@ return array(
 	 * DB connection, leave null to use default
 	 */
 	'db_connection' => null,
+	
+	/**
+	 * DB write connection, leave null to use default
+	 */
+	'db_write_connection' 	=> null,
 
 	/**
 	 * DB table name for the user table

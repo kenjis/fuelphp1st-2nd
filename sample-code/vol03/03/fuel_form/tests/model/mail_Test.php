@@ -2,7 +2,7 @@
 /**
  * 電子書籍『はじめてのフレームワークとしてのFuelPHP 第2版』の一部です。
  *
- * @version    1.0
+ * @version    1.1.0
  * @author     Kenji Suzuki <https://github.com/kenjis>
  * @license    MIT License
  * @copyright  2014 Kenji Suzuki
@@ -48,7 +48,7 @@ class model_mail_Test extends TestCase
 		$mail_data = Config::get('_tests.mail.data');
 		
 		// 管理者 <info@example.jp>
-		$expected = '=?UTF-8?B?566h55CG6ICF?= <info@example.jp>';
+		$expected = '"=?UTF-8?B?566h55CG6ICF?=" <info@example.jp>';
 		$this->assertEquals($expected, $mail_data['to']);
 		
 		// コンタクトフォーム
@@ -57,7 +57,7 @@ class model_mail_Test extends TestCase
 		
 		// From: 送信者 <foo@example.com>
 		$pattern = '/' 
-			. preg_quote('From: =?UTF-8?B?6YCB5L+h6ICF?= <foo@example.com>', '/') 
+			. preg_quote('From: "=?UTF-8?B?6YCB5L+h6ICF?=" <foo@example.com>', '/') 
 			. '/u';
 		$this->assertRegExp($pattern, $mail_data['additional_headers']);
 	}

@@ -2,7 +2,7 @@
 /**
  * 電子書籍『はじめてのフレームワークとしてのFuelPHP 第2版』の一部です。
  *
- * @version    1.0
+ * @version    1.1.0
  * @author     Kenji Suzuki <https://github.com/kenjis>
  * @license    MIT License
  * @copyright  2014 Kenji Suzuki
@@ -19,7 +19,7 @@ class Person
 
 	// コンストラクタ
 	public function __construct($name, $gender, $birthdate) {
-		$this->name       = $name;
+		$this->name      = $name;
 		$this->gender    = $gender;
 		$this->birthdate = $birthdate;
 	}

@@ -2,7 +2,7 @@
 /**
  * 電子書籍『はじめてのフレームワークとしてのFuelPHP 第2版』の一部です。
  *
- * @version    1.0
+ * @version    1.1.0
  * @author     Kenji Suzuki <https://github.com/kenjis>
  * @license    MIT License
  * @copyright  2014 Kenji Suzuki
@@ -27,7 +27,6 @@ class model_form_Test extends DbTestCase
 		foreach ($this->form_fixt as $row)
 		{
 			$form = Model_Form::find($row['id']);
-			$test = array();
 			
 			foreach ($row as $field => $value)
 			{

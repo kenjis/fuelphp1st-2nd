@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<phpunit colors="true" stopOnFailure="false" bootstrap="../app/bootstrap_phpunit.php" backupGlobals="false">
+<phpunit colors="true" stopOnFailure="false" bootstrap="../core/bootstrap_phpunit.php" backupGlobals="false">
 	<php>
 		<server name="doc_root" value="../../"/>
 		<server name="app_path" value="fuel/app"/>
@@ -18,6 +18,9 @@
 		</testsuite>
 		<testsuite name="app">
 			<directory suffix=".php">../app/tests</directory>
+		</testsuite>
+		<testsuite name="modules">
+			<directory suffix=".php">../app/modules/*/tests</directory>
 		</testsuite>
 	</testsuites>
 </phpunit>
