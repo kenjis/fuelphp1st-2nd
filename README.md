@@ -31,6 +31,10 @@
 
 * [達人出版会の電子版の正誤情報](https://github.com/kenjis/fuelphp1st-2nd/blob/master/ERRATA.md)
 
+## 追加情報
+
+本書の執筆時以降のアップデート情報は、[追加情報](https://github.com/kenjis/fuelphp1st-2nd/blob/master/UPDATE.md) を参照願います。
+
 ## コンタクトフォーム
 
 FuelPHP 1.7.2で本書の手順どおりに作成した「コンタクトフォーム」を別途以下で公開しました。
