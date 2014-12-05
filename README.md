@@ -30,6 +30,7 @@
 本書の誤りについては、以下を参照願います。
 
 * [達人出版会の電子版の正誤情報](https://github.com/kenjis/fuelphp1st-2nd/blob/master/ERRATA.md)
+* [ラトルズの紙版の正誤情報](https://github.com/kenjis/fuelphp1st-2nd/blob/master/ERRATA_rutles.md)
 
 ## 追加情報
 

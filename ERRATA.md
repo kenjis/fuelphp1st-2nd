@@ -2,6 +2,42 @@
 
 ここでは、本書の正誤情報を提供します。
 
+## (1)環境構築編 2014 年 10 月 25 日 v1.1.0
+
+### 第 3 章 FuelPHP のインストール設定
+
+(PDF P.87)
+
+リスト「bootstrap.php の変更点」
+
+【誤】
+~~~diff
+@@ -1,5 +1,8 @@
+ <?php
+
++// set default charset
++ini_set('default_charset', 'UTF-8');
++
+ // Load in the Autoloader
+ require COREPATH.'classes'.DIRECTORY_SEPARATOR.'autoloader.php';
+ class_alias('Fuel\\Core\\Autoloader', 'Autoloader');
+~~~
+
+【正】
+~~~diff
+@@ -1,4 +1,8 @@
+ <?php
++
++// set default charset
++ini_set('default_charset', 'UTF-8');
++
+ // Bootstrap the framework DO NOT edit this
+ require COREPATH.'bootstrap.php';
+
+~~~
+
+---
+
 以下の誤りは、v1.1.0 で修正済みです。
 
 ## (1)環境構築編 2014 年 6 月 4 日 v1.0.0
