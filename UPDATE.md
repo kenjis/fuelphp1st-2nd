@@ -32,8 +32,8 @@ MAMP 3.0.5では、Mac OS XをYosemiteにアップデートすると、Apacheが
 
 `php composer.phar update`コマンドを実行すると、以下のようにトークンを聞かれる場合があります。
 
-> Could not fetch https://api.github.com/repos/fuel/auth/git/refs/heads?per_page=100, please create a GitHub OAuth token to go over the API rate limit  
-Head to https://github.com/settings/tokens/new?scopes=repo&description=Composer+on+<servername>+2015-06-26+0933  
+> Could not fetch `https://api.github.com/repos/fuel/auth/git/refs/heads?per_page=100`, please create a GitHub OAuth token to go over the API rate limit  
+Head to `https://github.com/settings/tokens/new?scopes=repo&description=Composer+on+<servername>+2015-06-26+0933`  
 to retrieve a token. It will be stored in "/home/<username>/.composer/auth.json" for future use by Composer.  
 Token (hidden): 
 
@@ -57,8 +57,8 @@ Token (hidden):
 
 `oil create fuelphp`コマンドを実行すると、以下のようにトークンを聞かれる場合があります。
 
-> Could not fetch https://api.github.com/repos/fuel/auth/git/refs/heads?per_page=100, please create a GitHub OAuth token to go over the API rate limit  
-Head to https://github.com/settings/tokens/new?scopes=repo&description=Composer+on+<servername>+2015-06-26+0933  
+> Could not fetch `https://api.github.com/repos/fuel/auth/git/refs/heads?per_page=100`, please create a GitHub OAuth token to go over the API rate limit  
+Head to `https://github.com/settings/tokens/new?scopes=repo&description=Composer+on+<servername>+2015-06-26+0933`  
 to retrieve a token. It will be stored in "/home/<username>/.composer/auth.json" for future use by Composer.  
 Token (hidden): 
 
@@ -76,8 +76,8 @@ Token (hidden):
 
 `oil create fuelphp`コマンドを実行すると、以下のようにトークンを聞かれる場合があります。
 
-> Could not fetch https://api.github.com/repos/fuel/auth/git/refs/heads?per_page=100, please create a GitHub OAuth token to go over the API rate limit  
-Head to https://github.com/settings/tokens/new?scopes=repo&description=Composer+on+<servername>+2015-06-26+0933  
+> Could not fetch `https://api.github.com/repos/fuel/auth/git/refs/heads?per_page=100`, please create a GitHub OAuth token to go over the API rate limit  
+Head to `https://github.com/settings/tokens/new?scopes=repo&description=Composer+on+<servername>+2015-06-26+0933`  
 to retrieve a token. It will be stored in "/home/<username>/.composer/auth.json" for future use by Composer.  
 Token (hidden): 
 
