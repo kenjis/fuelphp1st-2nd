@@ -30,6 +30,17 @@ MAMP 3.0.5では、Mac OS XをYosemiteにアップデートすると、Apacheが
 
 リスト3.1　FuelPHP 1.7.3から`minimum-stability`は`stable`に変更されましたので、この変更は必要ありません。
 
+`php composer.phar update`コマンドを実行すると、以下のようにトークンを聞かれる場合があります。
+
+> Could not fetch https://api.github.com/repos/fuel/auth/git/refs/heads?per_page=100, please create a GitHub OAuth token to go over the API rate limit  
+Head to https://github.com/settings/tokens/new?scopes=repo&description=Composer+on+<servername>+2015-06-26+0933  
+to retrieve a token. It will be stored in "/home/<username>/.composer/auth.json" for future use by Composer.  
+Token (hidden): 
+
+これは、GitHub APIのレート制限です。詳細は以下を参照してください。
+
+* [tokenを聞かれFuelPHP 1.7.3がうまくインストールできない場合](http://blog.a-way-out.net/blog/2015/06/26/fuelphp-1-7-3-installation-trouble/)
+
 達人出版会電子版 PDF P.58 / ラトルズ紙版 P.66
 
 `1.8/develop`ブランチからはソースコードをより簡単に`1.8/develop`ブランチに更新できるようになりました。詳細は以下を参照してください。
@@ -39,6 +50,44 @@ MAMP 3.0.5では、Mac OS XをYosemiteにアップデートすると、Apacheが
 達人出版会電子版 PDF P.58 / ラトルズ紙版 P.67
 
 「`--prefer-source`を指定すると`1.8/develop`が、`--prefer-dist`を指定すると`1.7/master`がインストールされる」というFuelPHP独自の仕様は、FuelPHP 1.7.3からなくなりました。また、`composer.lock`を共有すればリビジョンを固定できるようになりました。
+
+### 3.3 Mac OS X での FuelPHP のインストール
+
+達人出版会電子版 PDF P.61 / ラトルズ紙版 P.70
+
+`oil create fuelphp`コマンドを実行すると、以下のようにトークンを聞かれる場合があります。
+
+> Could not fetch https://api.github.com/repos/fuel/auth/git/refs/heads?per_page=100, please create a GitHub OAuth token to go over the API rate limit  
+Head to https://github.com/settings/tokens/new?scopes=repo&description=Composer+on+<servername>+2015-06-26+0933  
+to retrieve a token. It will be stored in "/home/<username>/.composer/auth.json" for future use by Composer.  
+Token (hidden): 
+
+これは、GitHub APIのレート制限です。詳細は以下を参照してください。
+
+* [tokenを聞かれFuelPHP 1.7.3がうまくインストールできない場合](http://blog.a-way-out.net/blog/2015/06/26/fuelphp-1-7-3-installation-trouble/)
+
+達人出版会電子版 PDF P.62 / ラトルズ紙版 P.71
+
+リスト3.2　FuelPHP 1.7.3から`minimum-stability`は`stable`に変更されましたので、この変更は必要ありません。
+
+### 3.4 GNU/Linux での FuelPHP のインストール
+
+達人出版会電子版 PDF P.64 / ラトルズ紙版 P.74
+
+`oil create fuelphp`コマンドを実行すると、以下のようにトークンを聞かれる場合があります。
+
+> Could not fetch https://api.github.com/repos/fuel/auth/git/refs/heads?per_page=100, please create a GitHub OAuth token to go over the API rate limit  
+Head to https://github.com/settings/tokens/new?scopes=repo&description=Composer+on+<servername>+2015-06-26+0933  
+to retrieve a token. It will be stored in "/home/<username>/.composer/auth.json" for future use by Composer.  
+Token (hidden): 
+
+これは、GitHub APIのレート制限です。詳細は以下を参照してください。
+
+* [tokenを聞かれFuelPHP 1.7.3がうまくインストールできない場合](http://blog.a-way-out.net/blog/2015/06/26/fuelphp-1-7-3-installation-trouble/)
+
+達人出版会電子版 PDF P.65 / ラトルズ紙版 P.75
+
+リスト3.3　FuelPHP 1.7.3から`minimum-stability`は`stable`に変更されましたので、この変更は必要ありません。
 
 ### 4.1 ファイルの操作
 
